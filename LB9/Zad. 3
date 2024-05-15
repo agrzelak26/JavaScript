@@ -1,0 +1,47 @@
+let text = {
+	    check(txt, word){
+      		  return txt.includes(word);
+    	},
+  	  getCount(txt){
+      		  return txt.length;
+   	  },
+	    getWordsCount(txt){
+      		  const tab = txt.split(" ");
+      		  return tab.length;
+    	},
+  	  setCapitalize(txt){
+      		  let newTxt = '';
+      		  newTxt += txt.charAt(0).toUpperCase();
+     		    for(let i=1; i<txt.length; i++){
+          			  if(txt.charAt(i-1) === " "){
+            			      newTxt += txt.charAt(i).toUpperCase();
+            		  } else {
+          				      newTxt += txt.charAt(i);
+            		  }
+        		}
+      		  return newTxt;
+    	},
+  	  setMix(txt){
+      		  let newTxt = '';
+      		  for(let i=0; i<txt.length; i++){
+         			    if(i % 2 == 0){
+            			      newTxt += txt.charAt(i).toUpperCase();
+            		  } else if (i % 2 == 1){
+             			      newTxt += txt.charAt(i).toLowerCase();
+            		  }
+        		}
+      		  return newTxt;
+   	  },
+    	generateRandom(lng){
+        		let output = '';
+        		const letters = 'abcdefghijklmnoprstuwxyz';
+        		for(let i=0; i<lng; i++){
+          			  output += letters.charAt(Math.floor(Math.random() * letters.length));
+          	}
+        		return output;
+    	}
+};
+
+console.log(text.setCapitalize("Rano ptaki wstaja"));
+console.log(text.setMix("Rano ptaki wstaja"));
+console.log(text.generateRandom(15));
