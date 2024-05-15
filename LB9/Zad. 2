@@ -1,0 +1,34 @@
+class Book {
+    	users = [];
+  	  addUser(name, age, phone){
+           	const user = {name, age, phone};
+            this.users.push(user);
+      }
+      showUsers(){
+           	for (const user of this.users){
+                  console.log(user);
+            }
+      }
+  	  findByName(name){
+    		    const user = this.users.find((user) => user.name === name);
+      		  if(user){
+        			    return user;
+        		}
+      		  return false;
+    	}
+  	  findByPhone(phone){
+    		    const user = this.users.find((user) => user.phone === phone);
+      		  if(user){
+        			    return user;
+        		}
+      		  return false;
+    	}
+  	  getCount(){
+     	      return this.users.length
+      }
+}
+const book = new Book();
+book.addUser("Tomek", 19, 558352560)
+book.addUser("Kasia", 25, 922584092)
+book.showUsers()
+console.log(book.getCount())
