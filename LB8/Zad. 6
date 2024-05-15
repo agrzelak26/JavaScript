@@ -1,0 +1,18 @@
+function random(max){
+ 	 return Math.floor(Math.random()*(max+1)+0);
+}
+
+let tab = [];
+for(let i=0; i<20; i++){
+  	tab[i] = random(40);
+}
+tab.sort();
+
+let sum = 0;
+for(let i=0; i<20; i++){
+	  sum += tab[i]; 
+}
+let average = sum/20;
+
+console.log("Suma to " + sum);
+console.log("Srednia to " + average);
