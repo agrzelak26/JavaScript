@@ -1,0 +1,10 @@
+function printNumbers(nr){
+ 	let output = '';
+  	for(let i = 1; i <= nr; i++){
+    		output = output + i + ' ';
+   	}
+  	return output.trim();
+}
+
+
+console.log(printNumbers(20));
