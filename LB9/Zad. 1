@@ -1,0 +1,24 @@
+const currentUser = {
+	  name: "Pacek",
+	  surname: "Gackowski",
+	  email: "pacek@gmail.com",
+  	www: "www.pacek.pl",
+  	userType: "child",
+  	isActive: true,
+  	show: function(){
+     	  console.log(this.name)
+      	console.log(this.surname)
+      	console.log(this.email)
+      	console.log(this.www)
+      	console.log(this.userType)
+      	console.log(this.isActive)
+    },
+  	setActive: function(active){
+    	  this.isActive = active
+    }
+ 
+}
+
+currentUser.show()
+currentUser.setActive(false)
+currentUser.show()
